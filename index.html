@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10172a">
+<meta name="description" content="Labordes Deals — local finds, fair prices. Bikes, skateboards, clothes, electronics and more.">
+<title>Labordes Deals | Don't Sleep Shop Cheap</title>
+<style>
+:root{--navy:#10172a;--navy2:#17233f;--blue:#3568f5;--cyan:#5de1e6;--orange:#ff9d3d;--paper:#f5f7fb;--ink:#172033;--muted:#68738a;--line:#e1e6ef;--white:#fff;--radius:20px;--shadow:0 12px 32px rgba(16,23,42,.09)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--paper);color:var(--ink)}a{color:inherit}button,input,select,textarea{font:inherit}button{cursor:pointer}
+.topbar{background:#0b1020;color:#dce5ff;text-align:center;padding:9px 14px;font-size:.82rem;letter-spacing:.04em}
+header{background:linear-gradient(120deg,var(--navy),#202e56);color:white;padding:22px max(20px,calc((100% - 1180px)/2)) 36px}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.brand{display:flex;align-items:center;gap:11px;text-decoration:none}.logo{width:48px;height:48px;display:grid;place-items:center;border-radius:15px;background:linear-gradient(140deg,var(--orange),#ff5b47);color:#151b2b;font-weight:1000;font-size:1.25rem;box-shadow:0 5px 20px #ff88464a}.brand-name{font-weight:950;font-size:1.08rem;letter-spacing:.06em}.brand-tag{font-size:.72rem;color:#b7c6ec;margin-top:2px;letter-spacing:.09em}.navlinks{display:flex;align-items:center;gap:18px}.navlinks a{font-size:.92rem;color:#e5ebff;text-decoration:none}.navlinks a:hover{color:var(--cyan)}.navbtn,.primary{border:0;background:var(--orange);color:#151b2b;font-weight:850;padding:12px 17px;border-radius:12px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:7px}.navbtn:hover,.primary:hover{filter:brightness(1.04);transform:translateY(-1px)}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;padding:48px 0 14px}.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#ffffff12;border:1px solid #ffffff26;color:var(--cyan);padding:7px 11px;border-radius:999px;font-size:.76rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}.hero h1{font-size:clamp(2.5rem,6vw,4.9rem);line-height:.98;letter-spacing:-.055em;margin:18px 0 15px;max-width:720px}.hero h1 span{color:var(--orange)}.hero p{font-size:1.06rem;line-height:1.7;color:#c5d0eb;max-width:570px;margin:0 0 24px}.hero-actions{display:flex;gap:11px;flex-wrap:wrap}.secondary{display:inline-flex;align-items:center;justify-content:center;padding:12px 17px;border:1px solid #ffffff40;color:white;border-radius:12px;text-decoration:none;font-weight:750}.hero-art{min-height:260px;display:grid;place-items:center;position:relative}.orbit{width:min(100%,370px);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 35% 25%,#5de1e65e,transparent 38%),linear-gradient(145deg,#273d72,#111a31);border:1px solid #ffffff26;display:grid;place-items:center;box-shadow:inset 0 0 70px #080d1b80,0 20px 60px #050a193d;transform:rotate(-4deg)}.big-icons{font-size:clamp(2.4rem,6vw,4.5rem);display:grid;grid-template-columns:1fr 1fr;gap:18px;transform:rotate(4deg)}.big-icons span{width:105px;height:105px;border-radius:25px;background:#ffffff12;border:1px solid #ffffff24;display:grid;place-items:center;box-shadow:0 10px 25px #0002}.sticker{position:absolute;right:0;bottom:20px;background:var(--orange);color:#171d2d;padding:13px 17px;border-radius:15px;font-weight:950;transform:rotate(7deg);box-shadow:var(--shadow)}
+main{max-width:1180px;margin:auto;padding:34px 20px 70px}.trust-row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:0 0 38px}.trust{background:white;border:1px solid var(--line);border-radius:15px;padding:16px;display:flex;align-items:center;gap:12px}.trust .emoji{font-size:1.5rem}.trust strong{display:block;font-size:.91rem}.trust small{color:var(--muted);font-size:.78rem}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:18px}.section-head h2{font-size:clamp(1.7rem,4vw,2.4rem);letter-spacing:-.04em;margin:0}.section-head p{color:var(--muted);margin:6px 0 0}.count{color:var(--muted);font-size:.88rem}
+.toolbar{display:grid;grid-template-columns:minmax(190px,1fr) 210px 180px;gap:10px;margin-bottom:22px}.field{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:12px;background:white;color:var(--ink);outline:none}.field:focus{border-color:var(--blue);box-shadow:0 0 0 3px #3568f51a}
+.categories{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}.chip{border:1px solid var(--line);background:white;color:#4c5870;border-radius:999px;padding:9px 14px;font-weight:750;font-size:.85rem}.chip.active,.chip:hover{background:var(--navy);border-color:var(--navy);color:white}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}.product{background:white;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 3px 12px #10172a05;transition:.18s;display:flex;flex-direction:column}.product:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.product-visual{height:190px;display:grid;place-items:center;position:relative;background:linear-gradient(135deg,#edf2ff,#e3f7f7);font-size:5rem}.product-visual .tag{position:absolute;left:12px;top:12px;background:#fff;color:#27314a;border-radius:999px;padding:6px 10px;font-size:.72rem;font-weight:850;box-shadow:0 3px 10px #0001}.product-body{padding:16px;display:flex;flex-direction:column;flex:1}.product h3{font-size:1.04rem;margin:0 0 6px}.meta{font-size:.82rem;color:var(--muted);margin-bottom:10px}.description{color:#556078;font-size:.88rem;line-height:1.5;margin:0 0 14px;flex:1}.product-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid #eef1f6;padding-top:13px}.price{font-size:1.35rem;font-weight:950;letter-spacing:-.04em}.contact-btn{border:0;background:var(--blue);color:white;border-radius:10px;padding:10px 12px;font-size:.83rem;font-weight:850;text-decoration:none;display:inline-flex;align-items:center;justify-content:center}.contact-btn:hover{background:#244fd0}.empty{grid-column:1/-1;text-align:center;background:white;border:1px dashed #c8d0df;padding:42px 20px;border-radius:18px;color:var(--muted)}
+.sell-panel{margin-top:56px;background:linear-gradient(125deg,#111a31,#23396b);color:white;border-radius:24px;padding:clamp(22px,5vw,42px);display:grid;grid-template-columns:.8fr 1.2fr;gap:32px;align-items:start}.sell-copy h2{font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-.04em;margin:12px 0}.sell-copy p{color:#c4d0ed;line-height:1.65}.sell-copy ul{padding-left:19px;color:#dce5ff;line-height:1.9;font-size:.92rem}.sell-form{background:white;color:var(--ink);padding:22px;border-radius:18px;display:grid;grid-template-columns:1fr 1fr;gap:12px}.sell-form label{font-size:.8rem;font-weight:800;display:block;margin-bottom:6px}.form-field{min-width:0}.form-field.full{grid-column:1/-1}.sell-form textarea{min-height:85px;resize:vertical}.sell-form .primary{width:100%;grid-column:1/-1}.fineprint{font-size:.76rem;color:var(--muted);line-height:1.45;grid-column:1/-1;margin:0}.notice{display:none;background:#e7f9ef;border:1px solid #a7e3bf;color:#175d35;border-radius:12px;padding:12px;font-size:.86rem;grid-column:1/-1}.notice.show{display:block}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px}.about-card{background:white;border:1px solid var(--line);border-radius:18px;padding:24px}.about-card h3{margin:0 0 9px}.about-card p{color:var(--muted);line-height:1.65;margin:0}.contact-line{margin-top:12px;display:flex;gap:9px;flex-wrap:wrap}.contact-line a{color:var(--blue);font-weight:800;text-decoration:none}
+footer{background:#0b1020;color:#aebbd9;padding:25px 20px;text-align:center;font-size:.82rem}footer strong{color:white}
+.modal{position:fixed;inset:0;background:#070b16b8;display:none;align-items:center;justify-content:center;padding:18px;z-index:10}.modal.open{display:flex}.modal-card{max-width:440px;width:100%;background:white;border-radius:20px;padding:25px;box-shadow:0 30px 90px #0005}.modal-card h3{margin:0 0 8px;font-size:1.5rem}.modal-card p{color:var(--muted);line-height:1.55}.modal-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}.outline-btn{border:1px solid var(--line);background:white;border-radius:10px;padding:10px 13px;font-weight:800}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:35px}.hero-art{min-height:210px}.orbit{width:260px}.big-icons span{width:75px;height:75px}.trust-row{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sell-panel{grid-template-columns:1fr}.about{grid-template-columns:1fr}.navlinks{gap:10px}}
+@media(max-width:560px){header{padding-left:17px;padding-right:17px}.navlinks a:not(.navbtn){display:none}.hero h1{font-size:2.8rem}.toolbar{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.product-visual{height:210px}.sell-form{grid-template-columns:1fr;padding:16px}.form-field.full,.sell-form .primary,.fineprint,.notice{grid-column:1}.section-head{align-items:start;flex-direction:column}.sticker{right:4px;bottom:5px}}
+</style>
+</head>
+<body>
+<div class="topbar">LOCAL FINDS • FAIR PRICES • NEW TREASURES EVERY WEEK</div>
+<header>
+  <nav class="nav">
+    <a class="brand" href="#" aria-label="Labordes Deals home">
+      <span class="logo">LD</span><span><span class="brand-name">LABORDES DEALS</span><span class="brand-tag">DON'T SLEEP. SHOP CHEAP.</span></span>
+    </a>
+    <div class="navlinks"><a href="#shop">Shop items</a><a href="#about">About</a><a class="navbtn" href="#sell">＋ Sell an item</a></div>
+  </nav>
+  <section class="hero">
+    <div>
+      <span class="eyebrow">✦ Your neighborhood deal spot</span>
+      <h1>Good stuff.<br><span>Better prices.</span></h1>
+      <p>Bikes, boards, clothes, electronics, home goods and random treasures. Browse the finds, make an offer, and give good stuff a second life.</p>
+      <div class="hero-actions"><a class="primary" href="#shop">Browse the deals ↓</a><a class="secondary" href="#sell">List something for sale</a></div>
+    </div>
+    <div class="hero-art" aria-hidden="true"><div class="orbit"><div class="big-icons"><span>🚲</span><span>🛹</span><span>👟</span><span>🎧</span></div></div><div class="sticker">DEALS ON DECK!</div></div>
+  </section>
+</header>
+<main>
+  <section class="trust-row" aria-label="Marketplace features">
+    <div class="trust"><span class="emoji">🤝</span><div><strong>Local & direct</strong><small>Connect with the seller</small></div></div>
+    <div class="trust"><span class="emoji">💸</span><div><strong>Room to make an offer</strong><small>Ask about bundle prices</small></div></div>
+    <div class="trust"><span class="emoji">♻️</span><div><strong>Reuse. Save. Repeat.</strong><small>Good items deserve another home</small></div></div>
+  </section>
+
+  <section id="shop">
+    <div class="section-head"><div><h2>Today's finds</h2><p>Take a look around. Your next bargain might be here.</p></div><div class="count" id="resultCount" aria-live="polite"></div></div>
+    <div class="toolbar">
+      <input class="field" id="search" type="search" placeholder="Search bikes, brands, electronics…" aria-label="Search listings">
+      <select class="field" id="sort" aria-label="Sort listings"><option value="featured">Sort: Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="az">Name: A–Z</option></select>
+      <select class="field" id="condition" aria-label="Filter by condition"><option value="all">Any condition</option><option>Like new</option><option>Good</option><option>Fair</option><option>For parts</option></select>
+    </div>
+    <div class="categories" id="categories">
+      <button class="chip active" data-category="All">All items</button><button class="chip" data-category="Bikes">🚲 Bikes</button><button class="chip" data-category="Skateboards">🛹 Skateboards</button><button class="chip" data-category="Clothing">👕 Clothing</button><button class="chip" data-category="Electronics">🎧 Electronics</button><button class="chip" data-category="Home & Tools">🧰 Home & tools</button><button class="chip" data-category="Other">✨ Other</button>
+    </div>
+    <div class="grid" id="productGrid"></div>
+  </section>
+
+  <section class="sell-panel" id="sell">
+    <div class="sell-copy">
+      <span class="eyebrow">Got something to sell?</span>
+      <h2>Turn your extra stuff into cash.</h2>
+      <p>Got a bike taking up space? A skateboard you don't ride? Clothes, speakers, game gear, tools? Add the details and get your listing ready.</p>
+      <ul><li>Give it a clear title and honest condition.</li><li>Add a fair price and a short description.</li><li>Use safe, public meetup spots for local sales.</li></ul>
+    </div>
+    <form class="sell-form" id="sellForm">
+      <div class="form-field"><label for="itemTitle">Item title *</label><input class="field" id="itemTitle" required maxlength="70" placeholder="e.g. BMX bike"></div>
+      <div class="form-field"><label for="itemPrice">Price in dollars *</label><input class="field" id="itemPrice" type="number" required min="0" step="0.01" placeholder="40"></div>
+      <div class="form-field"><label for="itemCategory">Category *</label><select class="field" id="itemCategory" required><option value="Bikes">Bikes</option><option value="Skateboards">Skateboards</option><option value="Clothing">Clothing</option><option value="Electronics">Electronics</option><option value="Home & Tools">Home & tools</option><option value="Other">Other</option></select></div>
+      <div class="form-field"><label for="itemCondition">Condition *</label><select class="field" id="itemCondition" required><option>Good</option><option>Like new</option><option>Fair</option><option>For parts</option></select></div>
+      <div class="form-field full"><label for="itemDescription">Description *</label><textarea class="field" id="itemDescription" required maxlength="500" placeholder="Brand, size, what's included, anything buyers should know…"></textarea></div>
+      <div class="form-field full"><label for="itemEmoji">Listing icon</label><select class="field" id="itemEmoji"><option>📦</option><option>🚲</option><option>🛹</option><option>👕</option><option>👟</option><option>🎧</option><option>📱</option><option>🎮</option><option>🧰</option><option>🪑</option><option>✨</option></select></div>
+      <div class="notice" id="formNotice" role="status"></div>
+      <button class="primary" type="submit">Prepare my listing →</button>
+      <p class="fineprint">This free starter site saves listings in this browser only. To publish a listing for everyone to see, use the email draft it prepares and add the item to the site's listing data, or connect a shared listing service later. No payment is collected on this site.</p>
+    </form>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-card"><h3>About Labordes Deals</h3><p>A simple local-style bargain shop for secondhand finds, useful gear and unexpected treasures. Browse, ask questions, make a fair offer, and keep good items moving.</p></div>
+    <div class="about-card"><h3>Want to buy something?</h3><p>Ask for current availability, more photos, exact measurements and a safe pickup arrangement before sending money. Never share verification codes or pay a stranger with gift cards.</p><div class="contact-line"><a href="mailto:coastcentral831@gmail.com">Email the shop ↗</a><a href="https://cash.app/$ESSC88" target="_blank" rel="noopener">Cash App profile ↗</a></div></div>
+  </section>
+</main>
+<footer><strong>LABORDES DEALS</strong> · Don't Sleep. Shop Cheap. <span id="year"></span><br>Independent local resale page. Items and availability should be confirmed with the seller.</footer>
+
+<div class="modal" id="contactModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-card"><h3 id="modalTitle">Interested in this item?</h3><p id="modalText"></p><div class="modal-actions"><a class="contact-btn" id="emailSeller" href="#">Email about item</a><a class="contact-btn" href="https://cash.app/$ESSC88" target="_blank" rel="noopener">Cash App profile</a><button class="outline-btn" id="closeModal" type="button">Close</button></div><p style="font-size:.78rem">Confirm the item is available and agree on pickup before paying. Cash App is not an escrow service.</p></div>
+</div>
+<script>
+const SHOP_EMAIL = "coastcentral831@gmail.com";
+const seedItems = [
+ {id:"sample-bike",title:"Everyday commuter bike",price:65,category:"Bikes",condition:"Good",description:"Sample listing — replace with the bike's real brand, size and condition before publishing.",emoji:"🚲",sample:true},
+ {id:"sample-board",title:"Skateboard setup",price:25,category:"Skateboards",condition:"Good",description:"Sample listing — check the deck, trucks and wheels and update this description before publishing.",emoji:"🛹",sample:true},
+ {id:"sample-headphones",title:"Wireless headphones",price:20,category:"Electronics",condition:"Fair",description:"Sample listing — test the sound and battery and update this description before publishing.",emoji:"🎧",sample:true},
+ {id:"sample-hoodie",title:"Casual hoodie",price:12,category:"Clothing",condition:"Good",description:"Sample listing — add the size, brand and any wear before publishing.",emoji:"👕",sample:true},
+ {id:"sample-tools",title:"Hand tool bundle",price:18,category:"Home & Tools",condition:"Good",description:"Sample listing — list exactly which tools are included before publishing.",emoji:"🧰",sample:true},
+ {id:"sample-game",title:"Game controller",price:15,category:"Electronics",condition:"Fair",description:"Sample listing — confirm compatibility and test buttons before publishing.",emoji:"🎮",sample:true}
+];
+let customItems = [];
+try { customItems = JSON.parse(localStorage.getItem("labordesDealsItems") || "[]"); if(!Array.isArray(customItems)) customItems=[]; } catch(e) { customItems=[]; }
+let activeCategory="All";
+const grid=document.getElementById("productGrid");
+const money=n=>new Intl.NumberFormat("en-US",{style:"currency",currency:"USD",maximumFractionDigits:2}).format(n);
+function allItems(){return [...customItems,...seedItems]}
+function render(){
+ let items=allItems();
+ const q=document.getElementById("search").value.trim().toLowerCase();
+ const condition=document.getElementById("condition").value;
+ const sort=document.getElementById("sort").value;
+ items=items.filter(x=>(activeCategory==="All"||x.category===activeCategory)&&(condition==="all"||x.condition===condition)&&(!q||[x.title,x.category,x.description,x.condition].join(" ").toLowerCase().includes(q)));
+ if(sort==="low")items.sort((a,b)=>a.price-b.price);
+ if(sort==="high")items.sort((a,b)=>b.price-a.price);
+ if(sort==="az")items.sort((a,b)=>a.title.localeCompare(b.title));
+ document.getElementById("resultCount").textContent=`${items.length} item${items.length===1?"":"s"}`;
+ grid.innerHTML="";
+ if(!items.length){grid.innerHTML='<div class="empty"><div style="font-size:2rem">🔎</div><h3>No matches yet</h3><p>Try another search or category.</p></div>';return}
+ for(const item of items){
+  const article=document.createElement("article");article.className="product";
+  const visual=document.createElement("div");visual.className="product-visual";visual.innerHTML=`<span>${escapeHtml(item.emoji||"📦")}</span>`;
+  const tag=document.createElement("span");tag.className="tag";tag.textContent=item.sample?"Example item":item.condition;visual.appendChild(tag);
+  const body=document.createElement("div");body.className="product-body";
+  const title=document.createElement("h3");title.textContent=item.title;
+  const meta=document.createElement("div");meta.className="meta";meta.textContent=`${item.category} · ${item.condition}`;
+  const desc=document.createElement("p");desc.className="description";desc.textContent=item.description;
+  const foot=document.createElement("div");foot.className="product-foot";
+  const price=document.createElement("div");price.className="price";price.textContent=money(Number(item.price));
+  const btn=document.createElement("button");btn.className="contact-btn";btn.textContent="I'm interested";btn.type="button";btn.addEventListener("click",()=>openContact(item));
+  foot.append(price,btn);body.append(title,meta,desc,foot);
+  if(!item.sample && item.custom){const del=document.createElement("button");del.type="button";del.className="outline-btn";del.style.marginTop="10px";del.textContent="Remove my local listing";del.addEventListener("click",()=>{if(confirm("Remove this listing from this browser?")){customItems=customItems.filter(x=>x.id!==item.id);saveCustom();render()}});body.appendChild(del)}
+  article.append(visual,body);grid.appendChild(article);
+ }
+}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function saveCustom(){try{localStorage.setItem("labordesDealsItems",JSON.stringify(customItems))}catch(e){}}
+function openContact(item){
+ document.getElementById("modalTitle").textContent=item.title;
+ document.getElementById("modalText").textContent=`Listed at ${money(Number(item.price))}. Email the shop to ask whether it's available, request more details, or make an offer.`;
+ const subject=encodeURIComponent(`Question about ${item.title}`);
+ const body=encodeURIComponent(`Hi Labordes Deals,\n\nI'm interested in: ${item.title}\nListed price: ${money(Number(item.price))}\n\nIs it still available?`);
+ document.getElementById("emailSeller").href=`mailto:${SHOP_EMAIL}?subject=${subject}&body=${body}`;
+ document.getElementById("contactModal").classList.add("open");
+}
+document.getElementById("closeModal").addEventListener("click",()=>document.getElementById("contactModal").classList.remove("open"));
+document.getElementById("contactModal").addEventListener("click",e=>{if(e.target.id==="contactModal")e.currentTarget.classList.remove("open")});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")document.getElementById("contactModal").classList.remove("open")});
+document.getElementById("search").addEventListener("input",render);
+document.getElementById("sort").addEventListener("change",render);
+document.getElementById("condition").addEventListener("change",render);
+document.getElementById("categories").addEventListener("click",e=>{const btn=e.target.closest("button[data-category]");if(!btn)return;activeCategory=btn.dataset.category;document.querySelectorAll(".chip").forEach(x=>x.classList.toggle("active",x===btn));render()});
+document.getElementById("sellForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ const item={id:"local-"+Date.now(),title:document.getElementById("itemTitle").value.trim(),price:Number(document.getElementById("itemPrice").value),category:document.getElementById("itemCategory").value,condition:document.getElementById("itemCondition").value,description:document.getElementById("itemDescription").value.trim(),emoji:document.getElementById("itemEmoji").value,custom:true,sample:false};
+ if(!item.title||!item.description||!Number.isFinite(item.price)||item.price<0)return;
+ customItems.unshift(item);saveCustom();render();
+ const notice=document.getElementById("formNotice");notice.textContent="Your listing has been added on this device. To publish it publicly, tap the email draft below and send it to yourself/shop, then update the site's listing data.";notice.classList.add("show");
+ const subject=encodeURIComponent(`New listing for Labordes Deals: ${item.title}`);
+ const body=encodeURIComponent(`Please publish this listing on Labordes Deals:\n\nTitle: ${item.title}\nPrice: ${money(item.price)}\nCategory: ${item.category}\nCondition: ${item.condition}\nDescription: ${item.description}\nIcon: ${item.emoji}\n\nNote: this listing is saved only in the browser that created it until manually published.`);
+ const email=document.createElement("a");email.href=`mailto:${SHOP_EMAIL}?subject=${subject}&body=${body}`;email.textContent=" Open email draft to publish →";email.style.cssText="display:inline-block;margin-top:8px;color:#175d35;font-weight:900";notice.appendChild(email);
+ e.target.reset();document.getElementById("shop").scrollIntoView({behavior:"smooth"});
+});
+document.getElementById("year").textContent="© "+new Date().getFullYear();
+render();
+</script>
+</body>
+</html>
